@@ -1,0 +1,3 @@
+#!/bin/bash
+#tr -d ^[:ascii:] | tr -s '[A-Za-z]' '[\n*]'| 
+tr -cs '[\t]' '[\n*]' | sort -u | comm -23 -  sorted.words

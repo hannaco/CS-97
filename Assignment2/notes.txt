@@ -1,0 +1,21 @@
+2.1 
+2**(3**4)) evaluates to 0.
+
+(defun fits-in-max (number)  ; Second version.
+  "Print message in echo area depending on CHARACTERISTIC.
+If the CHARACTERISTIC is the string \"fierce\",
+then warn of a tiger; else say it is not fierce."
+  (if (< number 9223372036854775807)
+      (message "t")
+    (message "nil")))
+
+Running C-h k the first time asks you to type in a keybinding, and the second time you are specifying the keybinding you want to learn more about.
+Running C-h k M-SPC give you information about the M-SPC command.
+
+2.2
+M-x what-line lets you know what line you are on
+
+Homework
+1. You get an error: list index out of range, because null has nothing in it.
+2. On python3, I get a syntax error on except IOError as (errno, strerror):
+3. If I invoke shuf.py using python2, it still works, because I wrote in a style that is compatible with both Python 2 and 3.

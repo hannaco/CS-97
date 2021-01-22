@@ -1,0 +1,54 @@
+--- exer1.html	2020-10-01 14:03:55.000000000 -0700
++++ exer2.html	2020-10-02 20:35:14.237920000 -0700
+@@ -37,7 +37,7 @@
+   Tutorial Introduction to GNU Emacs</a> (2009)</li>
+ </ul>
+ 
+-<!-- diff，在UNIX系統上的一個工具程式，它可以比較兩個檔案之間的不同。通常它被用來比較同一個檔案，在不同版本間的差異。它可以產生一個擴展名為.diff或.patch的檔案，這個檔案可以被另一個工具程式patch來使用。-->
++
+ 
+ <p>Instructions:
+ Do the lab part of this assignment (including all shell commands and editing)
+@@ -49,7 +49,7 @@
+ files <samp>lab2.drib</samp>, <samp>lab3.drib</samp>, etc.)
+ </p>
+ 
+-<!-- DELETE-ME DELETE-ME DELETE-ME -->
++
+ <p>
+ For the editing lab exercises,
+ use intelligent ways of answering the questions. For example, if
+@@ -411,9 +411,9 @@
+ <section>
+ <h2>Submit</h2>
+ 
+-<!-- You can learn more about HTML comments at
+-	<https://en.wikipedia.org/wiki/HTML_comment#Comments>.
+-	-->
++
++
++
+ 
+ 	  <p>Submit the following files within a compressed tarball named
+ 	    <samp>assign1.tgz</samp>.</p>
+@@ -438,10 +438,10 @@
+ 
+ <p>should output a list of file names that contains <samp>shuf.py</samp>
+   etc., with sizes and other metainformation about the files.</p>
+-<!--
+-<p>Or maybe more lines, if something has gone wrong.</p>
+--<->-
+--->
++
++
++
++
+ </section>
+ 
+ <footer>
+@@ -459,4 +459,4 @@
+ 
+ </body>
+ </html>
+-<!-- end of HTML resource -->
++

@@ -1,0 +1,131 @@
+--- exer1.html	2020-10-01 14:03:55.000000000 -0700
++++ exer4.html	2020-10-02 20:58:31.116529000 -0700
+@@ -93,7 +93,7 @@
+ <section>
+ <h3>Lab 1.2: Deleting text in Emacs</h3>
+ 
+-<ol>
++<oL>
+ <li>Use Emacs to edit the file <samp>exer2.html</samp>. The idea is to
+ delete its HTML comments; the resulting page should display the same
+ text as the original.</li>
+@@ -123,7 +123,7 @@
+ <section>
+ <h3>Lab 1.3: Inserting text in Emacs</h3>
+ 
+-<ol>
++<oL>
+ <li>Use Emacs to edit the file <samp>exer3.html</samp>.</li>
+ 
+ <li>Change the first two instances of "Assignment 1" to "Assignment 42".</li>
+@@ -148,7 +148,7 @@
+ that you should know, like copy and paste, search and replace, and undo.
+ </p>
+ 
+-<ol>
++<oL>
+ <li>Execute the command "<samp>cat exer2.html exer2.diff &gt;exer4.html</samp>"
+ to create a file <samp>exer4.html</samp> that contains a copy of <samp>exer2.html</samp> followed by a copy of <samp>exer2.diff</samp>.</li>
+ <li>Use Emacs to edit the file <samp>exer4.html</samp>.
+@@ -195,7 +195,7 @@
+ works.
+ </p>
+ 
+-<ol>
++<oL>
+ <li>
+ Where are the <samp>mv</samp> and <samp>sh</samp> programs
+ located in the file system?
+@@ -279,7 +279,7 @@
+ Do these tasks all within Emacs. Don't use a shell subcommand
+ if you can avoid it.</p>
+ 
+-<ol>
++<oL>
+ <li>Create a new directory named "<samp>junk</samp>" that's right under
+ your home directory.</li>
+ 
+@@ -412,8 +412,8 @@
+ <h2>Submit</h2>
+ 
+ <!-- You can learn more about HTML comments at
+-	<https://en.wikipedia.org/wiki/HTML_comment#Comments>.
+-	-->
++-	<https://en.wikipedia.org/wiki/HTML_comment#Comments>.
++-	-->
+ 
+ 	  <p>Submit the following files within a compressed tarball named
+ 	    <samp>assign1.tgz</samp>.</p>
+@@ -439,9 +439,9 @@
+ <p>should output a list of file names that contains <samp>shuf.py</samp>
+   etc., with sizes and other metainformation about the files.</p>
+ <!--
+-<p>Or maybe more lines, if something has gone wrong.</p>
+--<->-
+--->
++-<p>Or maybe more lines, if something has gone wrong.</p>
++--<->-
++--->
+ </section>
+ 
+ <footer>
+@@ -460,3 +460,59 @@
+ </body>
+ </html>
+ <!-- end of HTML resource -->
++<!--
++--- exer1.html	2020-10-01 14:03:55.000000000 -0700
+++++ exer2.html	2020-10-02 20:35:14.237920000 -0700
++@@ -37,7 +37,7 @@
++   Tutorial Introduction to GNU Emacs</a> (2009)</li>
++ </ul>
++ 
++-<!-- diff，在UNIX系統上的一個工具程式，它可以比較兩個檔案之間的不同。通常它被用來比較同一個檔案，在不同版本間的差異。它可以產生一個擴展名為.diff或.patch的檔案，這個檔案可以被另一個工具程式patch來使用。--&gt;
+++
++ 
++ <p>Instructions:
++ Do the lab part of this assignment (including all shell commands and editing)
++@@ -49,7 +49,7 @@
++ files <samp>lab2.drib</samp>, <samp>lab3.drib</samp>, etc.)
++ </p>
++ 
++-<!-- DELETE-ME DELETE-ME DELETE-ME --&gt;
+++
++ <p>
++ For the editing lab exercises,
++ use intelligent ways of answering the questions. For example, if
++@@ -411,9 +411,9 @@
++ <section>
++ <h2>Submit</h2>
++ 
++-<!-- You can learn more about HTML comments at
++-	<https://en.wikipedia.org/wiki/HTML_comment#Comments>.
++-	--&gt;
+++
+++
+++
++ 
++ 	  <p>Submit the following files within a compressed tarball named
++ 	    <samp>assign1.tgz</samp>.</p>
++@@ -438,10 +438,10 @@
++ 
++ <p>should output a list of file names that contains <samp>shuf.py</samp>
++   etc., with sizes and other metainformation about the files.</p>
++-<!--
++-<p>Or maybe more lines, if something has gone wrong.</p>
++--<->-
++---&gt;
+++
+++
+++
+++
++ </section>
++ 
++ <footer>
++@@ -459,4 +459,4 @@
++ 
++ </body>
++ </html>
++-<!-- end of HTML resource --&gt;
+++
++-->

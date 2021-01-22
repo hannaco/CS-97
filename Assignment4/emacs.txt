@@ -1,0 +1,3 @@
+1. The mergepoint M is where the branch emacs-27 merges with master. The top window has a diagram of the branches, along with commit names, author, and timestamp. Below that is the commit id and row number of the selected commit. The bottom windows show a more detailed description of the selected commit, along with any comments made.
+
+3. The repo I cloned from Savannah only has one branch, master, while the copy on the SEASnet machine has many branches.

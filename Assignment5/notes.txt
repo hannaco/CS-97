@@ -1,0 +1,46 @@
+Move the write bytes function into output.c, and put the function header in output.h, removing the keyword static.
+Move hardware files into rand64-hw.c, and function definitions into rand64-hw.h, removing the keyword static.
+Move software files into rand64-sw.c, and function definitions into rand64-sw.h, removing the keyword static.
+Create options.c and create a function parseOpts to evalutate all the options in command line. The function header goes into options.h.
+parseOpts takes in the arguments from main and also an int, output. Output is initially -1, and is assigned to whatever tha argument to o is.
+The return value of parseOpts is a string which is assigned to a string in randall.c called input.
+If there is an argument to i, it returns the argument. Otherwise, it returns rdrand. If there is no argument to either i or o, it returns error or assigns -2 to output.
+Created rand64-mr.c and rand64-mr.h to contain functions for mdrand.
+The mdrand usage function I create randomly generates a number and returns that. The fini function does nothing, it's just for consistency.
+Include all the h files in randall.c and edit Makefile to compile all the new .c files, as well as including all files as requisites for randall.
+randall.c edited to check that input and output are not error or -2, and the NBYTES is an int.
+Check that we aren't using mdrand, then check for either hardware or software implementation.
+Deleted the initialize function so the init functions are just called. Allows me to pass args to software_init.
+If input = rdrand, and hardware isn't available, it defaults to software, and using /dev/random. 
+If input is something that starts with /, then we using software, and try to open the file.
+If using mdrand, we follow the code, annd assign rand64 and finalize to the functions in mdrand.
+If output = -1 (meaning no arg to o) then the code is what randall previosuly used, with writebytes.
+Otherwise, we create a buffer of nbytes, and fill it with whatever rand64 returns.
+We then call write nbytes/output times with the third arg being output. We call it a final time with however many bytes are "remaining".
+
+#time dd if=/dev/urandom ibs=8192 obs=8192 count=16384 >/dev/null
+16384+0 records in
+16384+0 records out
+134217728 bytes (134 MB) copied, 1.01451 s, 132 MB/s
+
+real    0m1.019s
+user    0m0.016s
+sys     0m1.001s
+
+#time ./randall 133562368 >/dev/null
+
+real    0m3.911s
+user    0m3.876s
+sys     0m0.035s
+
+#time ./randall 133562368 | cat >/dev/null
+
+real    0m4.218s
+user    0m3.934s
+sys     0m0.492s
+
+#time ./randall 133562368 >rand.data
+
+real    0m6.751s
+user    0m3.894s
+sys     0m0.140s

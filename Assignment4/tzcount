@@ -1,0 +1,23 @@
+#!/bin/bash
+
+timezones=(-1200 -1100 -1000 -0930 -0900 -0800 -0700 -0600 -0500 -0400 -0330 -0300 -0200 -0100 -0000 +0000 +0100 +0200 +0300 +0330 +0400 +0430 +0500 +0530 +0545 +0600 +0630 +0700 +0800 +0845 +0900 +0930 +1000 +1030 +1100 +1200 +1245 +1300 +1400)
+arraylength=${#timezones[@]}
+
+zonecount=(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+
+git log | grep -E $Date:.*[-+][0-9]{2}00$ > log.html
+while read line; do
+    zone=${line: -5}
+    for (( i=1; i<${arraylength}+1; i++ ));
+    do
+	if [ "${timezones[$i-1]}" == "$zone" ]; then
+	    zonecount[$i-1]=$((${zonecount[$i-1]}+1))
+	fi
+    done
+done <log.html
+
+for (( i=1; i<${arraylength}+1; i++ )); do
+    if [ ${zonecount[$i-1]} -ne 0 ]; then
+	echo "${timezones[$i-1]} ${zonecount[$i-1]}"
+    fi
+done

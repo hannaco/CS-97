@@ -1,0 +1,3 @@
+I would cd into the repository, and run the command git log -S "Even newspaper reports present contradictory information."
+The output of this command should give me all the files where the line was added, and who made the commit.
+I found that this line was added by Arthur David Olson with the timestamp  Thu Dec 21 11:43:42 1995 -0500. The commit was title "Eggert changes"

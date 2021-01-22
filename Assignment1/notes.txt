@@ -1,0 +1,21 @@
+Lab 1.1
+8. You can use C-a and C-e to go to the beginning or end of a line, and C-s to search for a word.
+
+Lab 1.4
+8. 5 occurrences of <ol> were found
+
+Lab 1.5
+1. /usr/bin
+2. ar - create, modify, and extract from archives, pr -  convert text files for printing, tr - translate or delete characters
+3. emacs
+4. 4.8.5 and 2.2
+5. u+sx enables setuid and makes the file exectuable. o-w removes the w permission.
+6. bash-5.0.18, bin, grep 3.5, ocaml-4.11.1
+7. 280
+8. librom1394.so.0.3.0
+9. /usr/lib/locale/locale-archive
+10. C-x C-1, M-1
+11. C-M-r does regex search backwards, C-M-s does regex search, C-M-t trasnpose sexps, C-M-u upcase-word,C-M-v scrolls to the help window.
+12. C-g is similar to a quit command in that it stops whatever command you are executing/typing.
+13. Yank is similar to paste, and the commant is C-y.
+14. They both do the same thing.
